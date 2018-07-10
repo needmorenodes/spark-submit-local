@@ -5,4 +5,4 @@
     --packages $SPARK_PACKAGES \
     --class $SPARK_CLASS \
     /jars/$SPARK_JAR \
-    $SPARK_PARAMS
+    $SPARK_PARAMS 2>&1 | tee /logs/out.log
