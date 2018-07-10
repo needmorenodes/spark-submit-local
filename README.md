@@ -2,7 +2,10 @@
 Spark standalone Docker image
 
 ```
-docker run -it --rm -v /DIR/TO/JARS/:/jars/ --name spark \
+docker run -it --rm \
+    -v /DIR/TO/JARS/:/jars/ \
+    -v /DIR/FOR/LOGS:/logs/ \
+    --name spark \
     --env SPARK_PACKAGES=<SPARK_MVN_PACKAGES> \
     --env SPARK_CLASS=<SPARK_CLASS> \
     --env SPARK_JAR=<JAR_NAME> \
